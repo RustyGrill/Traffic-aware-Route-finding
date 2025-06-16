@@ -1,4 +1,4 @@
-# Traffic-aware-Route-finding
+# Traffic-aware-path-finding
 
 A **DSA-powered route planner** that finds optimal paths between locations on a map using classic algorithms. It also simulates **real-time traffic** by randomly changing road weights.
 
