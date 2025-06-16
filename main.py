@@ -1,4 +1,5 @@
 import random
+from algorithms.dijkstra import dijkstra  # ✅ import added
 
 def create_sample_graph():
     graph = {
@@ -28,6 +29,17 @@ def main():
     graph = create_sample_graph()
     edge_weights = generate_traffic_weights(graph)
     print_graph(graph, edge_weights)
+
+    start = input("\nEnter start node: ").strip().upper()
+    goal = input("Enter goal node: ").strip().upper()
+
+    if start not in graph or goal not in graph:
+        print("❌ Invalid nodes.")
+        return
+
+    path, cost = dijkstra(graph, edge_weights, start, goal)
+    print(f"\n✅ Shortest path from {start} to {goal}: {' -> '.join(path)}")
+    print(f"🧮 Total cost: {cost}")
 
 if __name__ == "__main__":
     main()
