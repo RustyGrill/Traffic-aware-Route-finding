@@ -28,6 +28,6 @@ A **DSA-powered route planner** that finds optimal paths between locations on a 
 ## 🚀 Usage
 
 ```bash
-git clone https://github.com/yourusername/pathpilot
-cd pathpilot
+git clone https://github.com/yourusername/Traffic-aware-path-finding
+cd Traffic-aware-path-finding
 python main.py
