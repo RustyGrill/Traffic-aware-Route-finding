@@ -70,8 +70,8 @@ def main():
         print(f"🧮 Total cost: {cost}")
 
     elif algo_choice == '3':
-    dist_matrix, next_node_matrix = floyd_warshall(graph, edge_weights)
-    path = reconstruct_path(next_node_matrix, start, goal)
+        dist_matrix, next_node_matrix = floyd_warshall(graph, edge_weights)
+        path = reconstruct_path(next_node_matrix, start, goal)
     if path:
         print(f"✅ Shortest path from {start} to {goal}: {' -> '.join(path)}")
         print(f"🧮 Total cost: {dist_matrix[start][goal]}")
