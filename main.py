@@ -69,13 +69,15 @@ def main():
         print(f"\n✅ Path from {start} to {goal}: {' -> '.join(path)}")
         print(f"🧮 Total cost: {cost}")
 
-    elif algo == '3':
-        dist = floyd_warshall(graph, edge_weights)
-        print("\n📊 All-Pairs Shortest Path Matrix:")
-        for u in dist:
-            for v in dist[u]:
-                cost = dist[u][v]
-                print(f"{u} → {v} : {'∞' if cost == float('inf') else cost}")
+    elif algo_choice == '3':
+    dist_matrix, next_node_matrix = floyd_warshall(graph, edge_weights)
+    path = reconstruct_path(next_node_matrix, start, goal)
+    if path:
+        print(f"✅ Shortest path from {start} to {goal}: {' -> '.join(path)}")
+        print(f"🧮 Total cost: {dist_matrix[start][goal]}")
+    else:
+        print("⚠️ No path exists between the nodes.")
+
     else:
         print("❌ Invalid choice.")
 
