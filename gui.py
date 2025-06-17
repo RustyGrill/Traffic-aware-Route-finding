@@ -85,8 +85,7 @@ def run_a_star():
     if not start or not goal:
         output_text.set("Please select both start and goal.")
         return
-    heuristic = {node: 0 for node in graph}  # Zero heuristic for demo
-    path, cost = a_star(graph, edge_weights, heuristic, start, goal)
+    path, cost = a_star(graph, edge_weights, start, goal)
     output_text.set(f"A*: {' -> '.join(path)} (Cost: {cost})")
 
 def run_floyd():
