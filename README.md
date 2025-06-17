@@ -1,4 +1,4 @@
-# 🛣️ Traffic-aware Path Finding — *PathPilot GUI*
+# 🛣️ Traffic-aware Path Finding
 
 A **DSA-powered route planner** with a live-updating **desktop GUI** that visualizes paths between map locations using classic graph algorithms. Includes real-time **traffic simulation** by dynamically changing road weights.
 
